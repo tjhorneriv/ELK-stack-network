@@ -79,3 +79,9 @@ Overview of the VS Code + GitHub workflow:
 
 The sync button looks like this, and indicates the number of unsynced changes:
 !["sync button"](/images/sync.png "sync button")
+
+### Brief recap of steps to make changes with VS Code:
+ - change it
+ - save it
+ - commit it (requires a commit message)
+ - sync it
