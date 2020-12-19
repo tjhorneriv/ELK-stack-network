@@ -24,6 +24,13 @@ You can add new files to your project repo through the browser as well. From the
 
 This method gives you a local clone of your project repo. You can edit it with tools of your choice (VS Code is superb) and when you're done, push changes back to GitHub where they will be publicly viewable.
 
+0. You may have new SSH keys--install your current *public* key on your GitHub profile:
+ - click your profile icon in upper right
+ - click settings
+ - click SSH and GPG keys
+ - Click the *New SSH Key* button
+ - paste your public key in the window and submit by clicking the *Add SSH key* button
+
 1. Create a directory on your system to hold this repo. I suggest ~/github/reponame.
 
 2. `git init` in that directory to initialize the git repo.
@@ -45,4 +52,16 @@ Excellent material to add:
  - references you found valuable
  - I could go on all day...
 
-5. commit your changes to the master branch locally
+5. If you have added files, you need to add them with `git add (names of new files)`
+
+6. Commit your changes to the master branch locally with `git commit -m some comment`
+
+7. Make it live on your GitHub profile with `git push`.
+
+### super bonus: same as above, but in VS Code
+
+Complete steps 0-3 just as shown above.
+
+Then open files in VS Code and make your desired changes there.
+
+VS Code needs to know your 
