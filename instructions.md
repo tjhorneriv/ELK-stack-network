@@ -64,4 +64,17 @@ Complete steps 0-3 just as shown above.
 
 Then open files in VS Code and make your desired changes there.
 
-VS Code needs to know your 
+VS Code needs to know your GitHub credentials--it should ask for that on the fly when you do a push.
+
+Overview of the VS Code + GitHub workflow:
+
+ - open your local files and make changes
+ - save those changes locally. VS Code tracks those changes!
+   - you will see unsaved changes as a blue badge on the explorer icon at upper left
+ - commit your saved chages, with a comment, by clicking the Source Control icon at left
+   - it looks like the git logo
+   - uncommitted changes show as a blue badge on the source control icon
+ - push your changes to GitHub by clicking the synchronize changes icon in the toolbar at bottom left
+ - you may get prompted for credentials the first time
+
+ 
