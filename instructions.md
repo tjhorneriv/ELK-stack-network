@@ -77,4 +77,5 @@ Overview of the VS Code + GitHub workflow:
  - push your changes to GitHub by clicking the synchronize changes icon in the toolbar at bottom left
  - you may get prompted for credentials the first time
 
- 
+The sync button looks like thins, and indicates the number of unsynced changes:
+!["sync button"](/images/sync.png "sync button")
