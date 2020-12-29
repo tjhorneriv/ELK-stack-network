@@ -42,7 +42,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
 69.217.138.43
 
 Machines within the network can only be accessed by the Jump Box Provisioner which uses IP 10.0.0.4.
@@ -60,17 +60,19 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because you can issue commands to multiple servers from a single playbook. This is helpful with a few servers like this network but becomes immensely more valuable as the network becomes larger. This same technique can be used on thousands of servers at once.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Use the apt module to install docker.io
+- Use the apt module to install python3-pip
+- Use the pip module to install docker python module
+- Use the sysctl module to enhance memory using vm.max_map_count with a value of 262144
+- Use the docker container module to download and launch a docker elk container 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](images/docker_ps_output.png)
+![ELK:761 Container](images/elk-761_container.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
