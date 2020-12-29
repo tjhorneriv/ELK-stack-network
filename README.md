@@ -29,7 +29,6 @@ allows me to easily centralize log data from all the locations that I am interes
 - _TODO: What does Metricbeat record?_(Optional)
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -43,19 +42,21 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+69.217.138.43
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box Provisioner which uses IP 10.0.0.4.
+
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 69.217.138.43        |
+| Web-1    | No                  | 10.0.0.4             |
+| Web-2    | No                  | 10.0.0.4             |
+| Web-3    | No                  | 10.0.0.4             |
+| ELK-VM   | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
