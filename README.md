@@ -4,7 +4,7 @@ The files in this repository were used to configure the network shown below.
 
 ![ELK Stack Network](diagrams/ELK_Stack_Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ELK Playbook file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the install-elk.yml file may be used to install only certain pieces of it, such as Filebeat.
 
 This document contains the following details:
 - Description of the Topology
@@ -20,9 +20,9 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network. The load balancer
-implemented in this network ensures that none of the servers will be overwhelmed by the amount of traffic they receive, even in the event of a DDoS attack. The jump box provides tremendous value by creating as a single audit point that we can use to verify that all traffic reaching the virtual servers is from trusted sources preventing malicious software from infecting our system.  
+implemented in this network ensures that none of the servers will be overwhelmed by the amount of traffic they receive, even in the event of a DDoS attack. The jump box provides tremendous value by creating a single audit point that we can use to verify that all traffic reaching the virtual servers is from trusted sources which prevents malicious software from infecting our system.  
 
-Integrating the ELK server allows users on this netowrk to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat
+Integrating the ELK server allows users on this network to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat
 allows me to easily centralize log data from all the locations that I am interested in monitoring. It makes it simple to stay on top of any changes that might be problematic for my network.
 - _TODO: What does Metricbeat record?_(Optional)
 
@@ -88,7 +88,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml file to /etc/ansible/.
-- Update the /etc/ansible/host file to include the webserver and elkserver ip addresses.
+- Update the /etc/ansible/hosts file to include the webserver and elkserver ip addresses.
 - Run the playbook, and navigate to http://40.122.51.162:5601/app/kibana to check that the installation worked as expected.
 
 
