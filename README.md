@@ -18,10 +18,10 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network. The load balancer
-implemented in this network ensures that none of the servers will be overwhelmed by the amount of traffic they receive, even in the event of a DDoS attack. The jump box provides tremendous value by creating a single audit point that we can use to verify that all traffic reaching the virtual servers is from trusted sources which prevents malicious software from infecting our system.  
+implemented in this network ensures that none of the servers will be overwhelmed by the amount of traffic they receive, even in the event of a DDoS attack. The jump box provides tremendous value by creating a single audit point that we can use to verify that all traffic reaching the virtual servers is from trusted sources. This helps prevent malicious software from infecting our system.  
 
 Integrating the ELK server allows users on this network to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat
-allows me to easily centralize log data from all the locations that I am interested in monitoring. It makes it simple to stay on top of any changes that might be problematic for my network. Metricbeat works similarly but allows me to collect metrics and statistics from the services running on my servers in this network.
+allows me to easily centralize log data from all the locations that I am interested in monitoring. It makes it simple to stay on top of any changes that might be problematic for my network. Metricbeat works similarly by allowing me to collect metrics and statistics from the services running on my servers in this network.
 
 The configuration details of each machine may be found below.
 
