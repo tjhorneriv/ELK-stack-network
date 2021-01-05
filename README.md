@@ -10,8 +10,6 @@ This document contains the following details:
 - Description of the Topology
 - Access Policies
 - ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
 - How to Use the Ansible Build
 
 
@@ -23,8 +21,7 @@ Load balancing ensures that the application will be highly available, in additio
 implemented in this network ensures that none of the servers will be overwhelmed by the amount of traffic they receive, even in the event of a DDoS attack. The jump box provides tremendous value by creating a single audit point that we can use to verify that all traffic reaching the virtual servers is from trusted sources which prevents malicious software from infecting our system.  
 
 Integrating the ELK server allows users on this network to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat
-allows me to easily centralize log data from all the locations that I am interested in monitoring. It makes it simple to stay on top of any changes that might be problematic for my network.
-- _TODO: What does Metricbeat record?_(Optional)
+allows me to easily centralize log data from all the locations that I am interested in monitoring. It makes it simple to stay on top of any changes that might be problematic for my network. Metricbeat works similarly but allows me to collect metrics and statistics from the services running on my servers in this network.
 
 The configuration details of each machine may be found below.
 
@@ -82,7 +79,9 @@ I have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- TODO 
+- Filebeat: Log Data
+- Metricbeat: Metrics and Statistics 
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -90,6 +89,3 @@ SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml file to /etc/ansible/.
 - Update the /etc/ansible/hosts file to include the webserver and elkserver ip addresses.
 - Run the playbook, and navigate to http://40.122.51.162:5601/app/kibana to check that the installation worked as expected.
-
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
